@@ -39,7 +39,7 @@
       },
       {
         "command": "scrcpy.mirrorAlwaysOnTop",
-        "title": "mirror (Always On Top)",
+        "title": "mirror (always on top)",
         "category": "scrcpy"
       },
       {
@@ -116,6 +116,6 @@
     "@typescript-eslint/eslint-plugin": "^3.0.2",
     "@typescript-eslint/parser": "^3.0.2",
     "eslint": "^7.1.0",
-    "typescript": "^3.9.10"
+    "typescript": "^4.8.3"
   }
 }
