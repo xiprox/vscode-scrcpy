@@ -29,22 +29,22 @@ async function askForBitRate(): Promise<string | undefined> {
 
 async function askForAlwaysOnTop(): Promise<boolean | undefined> {
   const onTop = await window.showQuickPick(['Yes', 'No'], {
-    placeHolder: 'Display always on top?',
+    placeHolder: 'Window always on top?',
   });
 
   return onTop === 'Yes';
 }
 
 async function askForStayAwake(): Promise<boolean | undefined> {
-  const awake = await window.showQuickPick(['Yes', 'No'], {
-    placeHolder: 'Should the device stay awake?',
+  const stayAwake = await window.showQuickPick(['Yes', 'No'], {
+    placeHolder: 'Keep device awake?',
   });
-  return awake === 'Yes';
+  return stayAwake === 'Yes';
 }
 
 async function askForTurnScreenOff(): Promise<boolean | undefined> {
   const screenOff = await window.showQuickPick(['Yes', 'No'], {
-    placeHolder: 'Turn the display off?',
+    placeHolder: 'Turn device screen off?',
   });
   return screenOff === 'Yes';
 }
