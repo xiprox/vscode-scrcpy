@@ -7,6 +7,7 @@ import {
   customPath,
   customSize,
   mirror,
+  mirrorStayAwake,
   mirrorWithAlwaysOnTop,
   record
 } from './scrcpy';
@@ -22,6 +23,8 @@ export function activate(context: ExtensionContext) {
   const registrations = [
     register('scrcpy.mirror', mirror),
     register('scrcpy.mirrorAlwaysOnTop', mirrorWithAlwaysOnTop),
+    register('scrcpy.mirrorScreenOff', () => mirrorWithAlwaysOnTop),
+    register('scrcpy.mirrorStayAwake', () => mirrorStayAwake),
     register('scrcpy.mirrorBitRate', () => customBitRate('mirror')),
     register('scrcpy.mirrorFrameRate', () => customFrameRate('mirror')),
     register('scrcpy.mirrorSize', () => customSize('mirror')),

@@ -72,15 +72,25 @@ function record() {
 }
 
 async function mirrorWithAlwaysOnTop() {
-  const awake = (await askForStayAwake()) || null;
-  const screenOff = (await askForTurnScreenOff()) || null;
   start({
     mode: 'mirror',
     alwaysOnTop: true,
-    stayAwake: awake,
-    screenOff: screenOff,
   });
 }
+async function mirrorStayAwake() {
+  start({
+    mode: 'mirror',
+    stayAwake: true,
+  });
+}
+
+async function mirrorScreenOff() {
+  start({
+    mode: 'mirror',
+    screenOff: true,
+  });
+}
+
 
 async function customBitRate(mode: Mode) {
   const bitrate = await askForBitRate();
@@ -112,7 +122,7 @@ async function customEverything(mode: Mode) {
   const framerate = await askForFrameRate();
   const size = await askForSize();
   const crop = await askForCrop();
-  const awake = (await askForStayAwake()) || null;
+  const stayAwake = (await askForStayAwake()) || null;
   const screenOff = (await askForTurnScreenOff()) || null;
   const alwaysOnTop = (await askForAlwaysOnTop()) || null;
 
@@ -127,7 +137,7 @@ async function customEverything(mode: Mode) {
     path: path || null,
     size: size || null,
     crop: crop || null,
-    stayAwake: awake,
+    stayAwake: stayAwake,
     screenOff: screenOff,
     alwaysOnTop: alwaysOnTop,
   });
@@ -136,6 +146,8 @@ async function customEverything(mode: Mode) {
 export {
   mirror,
   mirrorWithAlwaysOnTop,
+  mirrorStayAwake,
+  mirrorScreenOff,
   record,
   customBitRate,
   customFrameRate,
@@ -144,3 +156,4 @@ export {
   customCrop,
   customEverything,
 };
+
