@@ -1,15 +1,15 @@
 {
-  "name": "scrcpy",
-  "displayName": "scrcpy",
-  "description": "Mirror, control, and record android device with scrcpy.",
-  "version": "0.0.9",
-  "publisher": "ihsanis",
+  "name": "scrcpy2",
+  "displayName": "scrcpy2",
+  "description": "Mirror, control, and record android device with scrcpy. (Updated)",
+  "version": "1.1.0",
+  "publisher": "ihsandev",
   "license": "SEE THE LICENSE FILE",
-  "repository": "https://github.com/maestralsol/vscode-scrcpy",
+  "repository": "https://github.com/xiprox/vscode-scrcpy",
   "icon": "icon.png",
   "engines": {
-		"vscode": "^1.71.0"
-	},
+    "vscode": "^1.71.0"
+  },
   "categories": [
     "Other"
   ],
